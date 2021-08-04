@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Advisory VE/S/00001 for Skytable</title>
+    <title>Advisory VE/S/00002 for Skytable</title>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link
@@ -16,16 +16,16 @@
     />
     <link rel="stylesheet" href="assets/css/home.css" />
     <link rel="preconnect" href="https://fonts.gstatic.com" />
-    <meta property="og:title" content="Advisory VE/S/00001 for Skytable" />
+    <meta property="og:title" content="Advisory VE/S/00002 for Skytable" />
     <meta
       property="og:description"
-      content="Information on the vulnerability VE/S/00001 for Skytable users issued by the Skytable Security Team"
+      content="Information on the vulnerability VE/S/00002 for Skytable users issued by the Skytable Security Team"
     />
     <meta property="og:url" content="https://security.skytable.io" />
-    <meta name="twitter:title" content="Advisory VE/S/00001 for Skytable"">
+    <meta name="twitter:title" content="Advisory VE/S/00002 for Skytable"">
     <meta
       name=" twitter:description"
-      content="Information on the vulnerability VE/S/00001 for Skytable users issued by the Skytable Security Team"
+      content="Information on the vulnerability VE/S/00002 for Skytable users issued by the Skytable Security Team"
     />
   </head>
 
@@ -75,110 +75,84 @@
       </div>
     </nav>
     <div class="container-fluid">
-      <h1>VE/S/00001</h1>
+      <h1>VE/S/00002</h1>
       <div class="table-responsive">
         <table class="table table-striped">
           <thead></thead>
           <tbody>
             <tr>
               <th scope="row">Reported by</th>
-              <td>Sayan Nandan &lt;ohsayan@outlook.com&gt;</td>
+              <td>[TO BE DISCLOSED]</td>
             </tr>
             <tr>
               <th scope="row">CVE</th>
-              <td>
-                <a
-                  href="https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2021-32814"
-                  >CVE-2021-32814</a
-                >
-              </td>
+              <td>[TO BE DISCLOSED]</td>
             </tr>
             <tr>
               <th scope="row">Reported on</th>
-              <td>Feb 14, 2021 0530 UTC</td>
+              <td>[TO BE DISCLOSED]</td>
             </tr>
             <tr>
               <th scope="row">Patch Release Date</th>
-              <td>Feb 15 2021, 0539 UTC</td>
+              <td>Aug 03 2021, 0914 UTC</td>
             </tr>
             <tr>
               <th scope="row">Public Disclosure Date</th>
-              <td>Feb 17 2021, 0715 UTC</td>
+              <td>[TO BE DISCLOSED]</td>
             </tr>
             <tr>
               <th scope="row">Affected versions</th>
-              <td>0.5.0</td>
+              <td>
+                0.1.0, 0.2.0, 0.3.0, 0.3.1, 0.3.2, 0.4.0, 0.4.1, 0.4.2, 0.4.3,
+                0.4.4, 0.4.5, 0.5.0, 0.5.1, 0.5.2, 0.5.3, 0.6.0, 0.6.1, 0.6.2,
+                0.6.3
+              </td>
             </tr>
             <tr>
               <th scope="row">Affected binaries</th>
-              <td>server (<code>tdb</code>)</td>
+              <td>
+                server (<code>skyd</code> for versions > 0.5.0 and
+                <code>tdb</code>
+                for versions < 0.5.1)
+              </td>
             </tr>
             <tr>
               <th scope="row">Patched binary link</th>
               <td>
-                <a href="https://dl.skytable.io/v0.5-hotfix.1/" target="_blank"
-                  >https://dl.skytable.io/v0.5-hotfix.1</a
+                <a
+                  href="https://dl.skytable.io/security/v0.6.4/"
+                  target="_blank"
+                  >https://dl.skytable.io/security/v0.6.4/</a
                 >
               </td>
             </tr>
             <tr>
               <th scope="row">Attack type</th>
-              <td>Directory Traversal</td>
+              <td>[TO BE DISCLOSED]</td>
             </tr>
             <tr>
               <th scope="row">Impact</th>
-              <td>Escalation of Privileges</td>
+              <td>[TO BE DISCLOSED]</td>
             </tr>
             <tr>
               <th scope="row">Attack vectors</th>
-              <td>Access to the database server</td>
+              <td>[TO BE DISCLOSED]</td>
             </tr>
             <tr>
               <th scope="row">Procedure</th>
-              <td>
-                Run the 'enhanced' <code>MKSNAP</code> action by using directory
-                traversal syntax.<br />
-                If Person A is running the database server on system S and the
-                database port (say port X) is not blocked from outside access,
-                then Person B can connect to the database server running on S.
-                Now they can run the action
-                <code>MKSNAP</code> with directory traversal syntax to overwrite
-                and/or destroy files in the path. For example, if Person B
-                runs:<br />
-                <code>MKSNAP ../bad</code><br />
-                then the database server will attempt to create a snapshot of
-                the database with a file path of
-                <code>../bad.snapshot</code>. If this file does indeed exist,
-                then its contents can be overwritten if appropriate permissions
-                aren't set. <br />Even worse, Person B can also run:<br />
-                <code>MKSNAP /var/file</code><br />
-                This makes it possible to overwrite critical system files that
-                have the same name, if appropriate permissions aren't set.
-              </td>
+              <td>[TO BE DISCLOSED]</td>
             </tr>
             <tr>
               <th scope="row">Erroneous logic</th>
-              <td>
-                At release 0.5.0, the file path for the snapshot was simply
-                generated by appending a '.snapshot' string. The path was not
-                sanitized.
-              </td>
+              <td>[TO BE DISCLOSED]</td>
             </tr>
             <tr>
               <th scope="row">Mitigation</th>
-              <td>
-                The file path simply needs to be sanitized to check for
-                directory traversal syntax
-              </td>
+              <td>[TO BE DISCLOSED]</td>
             </tr>
             <tr>
               <th scope="row">Public patch commit</th>
-              <td class="text-danger">
-                <a
-                  href="https://github.com/skytable/skytable/commit/339844a6139bc759bafba0de7352d1b78840a6ab"
-                  >30532bb462596ebebd10704a0d8bfd27770aa756</a
-                >
-              </td>
+              <td>[TO BE DISCLOSED]</td>
             </tr>
           </tbody>
         </table>
