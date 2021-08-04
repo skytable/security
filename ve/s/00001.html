@@ -127,11 +127,11 @@
             </tr>
             <tr>
               <th scope="row">Impact</th>
-              <td>Escalation of Privileges</td>
+              <td>(1) Loss of data</td>
             </tr>
             <tr>
               <th scope="row">Attack vectors</th>
-              <td>Access to the database server</td>
+              <td>Remote access to the database server</td>
             </tr>
             <tr>
               <th scope="row">Procedure</th>
@@ -145,14 +145,12 @@
                 <code>MKSNAP</code> with directory traversal syntax to overwrite
                 and/or destroy files in the path. For example, if Person B
                 runs:<br />
-                <code>MKSNAP ../bad</code><br />
+                <code>MKSNAP ../../../../bad</code><br />
                 then the database server will attempt to create a snapshot of
                 the database with a file path of
-                <code>../bad.snapshot</code>. If this file does indeed exist,
-                then its contents can be overwritten if appropriate permissions
-                aren't set. <br />Even worse, Person B can also run:<br />
-                <code>MKSNAP /var/file</code><br />
-                This makes it possible to overwrite critical system files that
+                <code>remote/../../../../bad.snapshot</code> which in practice can point to the root (`/`) directory.
+                If this file does indeed exist, then its contents can be overwritten if appropriate permissions
+                aren't set, also making it possible to overwrite critical system files that
                 have the same name, if appropriate permissions aren't set.
               </td>
             </tr>
