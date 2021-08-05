@@ -82,23 +82,25 @@
           <tbody>
             <tr>
               <th scope="row">Reported by</th>
-              <td>[TO BE DISCLOSED]</td>
+              <td>Martin Molin &lt;martin@ternacode.com&gt;;<br />
+                  Sayan Nandan &lt;ohsayan@outlook.com&gt;;
+              </td>
             </tr>
             <tr>
               <th scope="row">CVE</th>
-              <td>[TO BE DISCLOSED]</td>
+              <td><a href="https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2021-37625">CVE-2021-37625</a></td>
             </tr>
             <tr>
               <th scope="row">Reported on</th>
-              <td>[TO BE DISCLOSED]</td>
+              <td>Aug 02 2021, 1122 UTC</td>
             </tr>
             <tr>
               <th scope="row">Patch Release Date</th>
-              <td>Aug 03 2021, 0914 UTC</td>
+              <td>Aug 03 2021, 0401 UTC</td>
             </tr>
             <tr>
               <th scope="row">Public Disclosure Date</th>
-              <td>[TO BE DISCLOSED]</td>
+              <td>Aug 05 2021, 0700 UTC</td>
             </tr>
             <tr>
               <th scope="row">Affected versions</th>
@@ -127,31 +129,37 @@
             </tr>
             <tr>
               <th scope="row">Attack type</th>
-              <td>[TO BE DISCLOSED]</td>
+              <td>Other</td>
             </tr>
             <tr>
               <th scope="row">Impact</th>
-              <td>[TO BE DISCLOSED]</td>
+              <td>Denial of Service (DoS)</td>
             </tr>
             <tr>
               <th scope="row">Attack vectors</th>
-              <td>[TO BE DISCLOSED]</td>
+              <td>Network</td>
             </tr>
             <tr>
               <th scope="row">Procedure</th>
-              <td>[TO BE DISCLOSED]</td>
+              <td>
+                When user A with access to system S which has a database instance running
+                runs a specially crafted TCP connection or an incomplete TLS connection through
+                the use of <i>patched</i> libraries, they can cause a Denial of Service (DoS)
+                attack by taking down the entire database instance without the instance reporting
+                any sort of error.
+              </td>
             </tr>
             <tr>
               <th scope="row">Erroneous logic</th>
-              <td>[TO BE DISCLOSED]</td>
+              <td>N/A</td>
             </tr>
             <tr>
               <th scope="row">Mitigation</th>
-              <td>[TO BE DISCLOSED]</td>
+              <td>Upgrade to the latest Skytable release</td>
             </tr>
             <tr>
               <th scope="row">Public patch commit</th>
-              <td>[TO BE DISCLOSED]</td>
+              <td>Backport (<a href="https://github.com/skytable/skytable/commit/92a5550ff39ca2b555c9c5b7d30967e41e3ed790">92a5550ff39ca2b555c9c5b7d30967e41e3ed790</a>)</td>
             </tr>
           </tbody>
         </table>
